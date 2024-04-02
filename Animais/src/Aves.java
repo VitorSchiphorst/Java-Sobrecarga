@@ -1,3 +1,3 @@
-public class Aves {
+public class Aves extends Oviparo {
 
 }

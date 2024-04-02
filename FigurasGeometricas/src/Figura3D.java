@@ -1,3 +1,3 @@
-public class Figura3D {
+public class Figura3D extends Figura {
 
 }

@@ -1,3 +1,3 @@
-public class Quadrado {
+public class Quadrado extends Figura2D {
 
 }

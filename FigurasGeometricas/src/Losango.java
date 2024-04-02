@@ -1,3 +1,3 @@
-public class Losango {
+public class Losango extends Figura2D {
 
 }

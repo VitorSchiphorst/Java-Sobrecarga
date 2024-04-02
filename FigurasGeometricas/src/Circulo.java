@@ -1,3 +1,3 @@
-public class Circulo {
+public class Circulo extends Figura2D {
 
 }

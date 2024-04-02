@@ -1,3 +1,3 @@
-public class Cubo {
+public class Cubo extends Figura3D {
 
 }

@@ -1,3 +1,3 @@
-public class Trapezio {
+public class Trapezio extends Figura2D {
 
 }

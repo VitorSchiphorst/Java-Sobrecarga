@@ -1,3 +1,3 @@
-public class Ornitorrinco {
+public class Ornitorrinco extends Oviparo {
 
 }

@@ -1,3 +1,3 @@
-public class Anfibios {
+public class Reptil extends Oviparo {
 
 }
