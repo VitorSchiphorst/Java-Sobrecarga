@@ -10,6 +10,9 @@ public class LivroDeNotas {
 	private Double[] notas2;
 	private Double[] media;
 	private Integer qtdAlunos;
+	private Double notaMaior;
+	private Double notaMaiorOculta;
+	private Double div;
 	
 	public LivroDeNotas(String nomeDisciplina, Integer qtdAlunos) {
 		this.nomeDisciplina = nomeDisciplina;
@@ -25,7 +28,6 @@ public class LivroDeNotas {
 		for (int i = 0; i < this.qtdAlunos; i++) {
 			this.notas1[i] = r.nextDouble() * 10;
 			this.notas2[i] = r.nextDouble() * 10;
-			
 		}
 	}
 	
@@ -47,7 +49,7 @@ public class LivroDeNotas {
 	}
 	
 	public void maiorNota() {
-		Double notaMaior = 0.0;
+		notaMaior = 0.0;
 		Double media;
 		String maior = "";
 		
@@ -62,12 +64,28 @@ public class LivroDeNotas {
 		
 		JOptionPane.showMessageDialog(null, maior);
 	}
-	
-	public double variancia() {
-		Double mediaTurma = 0.0;
+
+	public void maiorNotaOculto() {
+		notaMaiorOculta = 0.0;
+		Double media;
 		
 		for (int i = 0; i < this.qtdAlunos; i++) {
-			mediaTurma += this.media[i];
+			media = this.media[i];
+			
+			if(media >= notaMaiorOculta) {
+				notaMaiorOculta = media;
+			}
+		}
+	}
+	
+	public void variancia() {
+		Double mediaTurma = 0.0;
+		Double div = 0.0;
+		String result = "";
+		for (int i = 0; i < this.qtdAlunos; i++) {
+			if (this.media[i] >= 7.0) {
+				mediaTurma += this.media[i];				
+			}
 		}
 		
 		mediaTurma = mediaTurma / this.qtdAlunos;
@@ -75,17 +93,81 @@ public class LivroDeNotas {
 		Double soma = 0.0;
 		
 		for (int i = 0; i < this.qtdAlunos; i++) {
-			soma += Math.pow(this.media[i] - mediaTurma, 2);			
+			if (this.media[i] >= 7.0) {
+				soma += Math.pow(this.media[i] - mediaTurma, 2);			
+			}
 		}
-		
-		return soma / (this.qtdAlunos - 1);
+
+		div = soma / (this.qtdAlunos - 1);
+
+		result = String.format("Variância = %.2f", notaMaior);
+
+		JOptionPane.showMessageDialog(null, result);
 	}
 	
-	public double desvioPadrao() {
-		return Math.sqrt(this.variancia());
+	public void desvioPadrao() {
+		Double result = Math.sqrt(this.div);
+
+		String saida = String.format("Variância = %.2f", result);
+
+		JOptionPane.showMessageDialog(null, saida);
+	}
+
+	public void mediaTotal() {
+		Double soma = 0.0;
+		Integer j = 0;
+		Double result = 0.0;
+		for (int i = 0; i < this.qtdAlunos; i++) {
+			
+			if (this.media[i] >= 7.0) {
+				soma += this.media[i];
+				j++;
+			}
+		}
+
+		result = soma / j;
+
+		String saida = String.format("Variância = %.2f", result);
+
+		JOptionPane.showMessageDialog(null, saida);
+	} 
+
+	public void segMaiorNota() {
+		Double notaAnterior = this.media[0];
+		String segMaior = "";
+		
+		for (int i = 0; i < this.qtdAlunos; i++) {
+			if (this.notaMaiorOculta > notaAnterior && notaAnterior < this.media[i] && this.notaMaiorOculta != this.media[i]) {
+				notaAnterior = this.media[i];
+				
+				segMaior = String.format("O Aluno %d teve a Segunda Maior Nota = %.2f", i, notaAnterior);
+			}
+		}
+
+		JOptionPane.showMessageDialog(null, segMaior);
 	}
 
 	public String getNomeDisciplina() {
 		return nomeDisciplina;
+	}
+
+	public Double[] getNotas1() {
+		return notas1;
+	}
+
+	public Double[] getNotas2() {
+		return notas2;
+	}
+
+	public Double[] getMedia() {
+		return media;
+	}
+
+	public Integer getQtdAlunos() {
+		return qtdAlunos;
+	}
+
+	public Double getNotaMaior() {
+		return notaMaior;
 	}
 }
