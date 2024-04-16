@@ -1,0 +1,92 @@
+<mxfile host="65bd71144e">
+    <diagram id="p4B_chuQpdok4x23r5Ak" name="UseCases">
+        <mxGraphModel dx="844" dy="714" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="120" width="500" height="840" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Pessoa" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;labelBorderColor=none;sketch=0;strokeColor=default;fillColor=none;gradientColor=none;html=1;swimlaneLine=1;" parent="1" vertex="1">
+                    <mxGeometry x="287.5" y="150" width="205" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="- nome: String&lt;br&gt;- CPF: Long&lt;br&gt;- RG: Integer&lt;br&gt;- endereco: String&lt;br&gt;- telefone: Long" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;labelBorderColor=none;sketch=0;html=1;" parent="23" vertex="1">
+                    <mxGeometry y="26" width="205" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;labelBorderColor=default;sketch=0;html=1;" parent="23" vertex="1">
+                    <mxGeometry y="110" width="205" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="+ getNome(String): String&lt;br&gt;+ setNome(String): void&lt;br&gt;+ getCPF(Long): Long&lt;br&gt;+ setCPF(Long): void&lt;br&gt;+ getRG(Integer): Integer&lt;br&gt;+ setRG(Integer): void&lt;br&gt;+ getEndereco(String): String&lt;br&gt;+ setEndereco(String): void&lt;br&gt;+ getTelefone(Long): Long&lt;br&gt;+ setTelefone(Long): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;labelBorderColor=none;sketch=0;html=1;" parent="23" vertex="1">
+                    <mxGeometry y="118" width="205" height="152" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" style="edgeStyle=none;html=1;" parent="1" source="32" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="390" y="420" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="270" y="450"/>
+                            <mxPoint x="390" y="450"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="Paciente" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;labelBorderColor=none;sketch=0;strokeColor=default;fillColor=none;gradientColor=none;html=1;swimlaneLine=1;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="482" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;labelBorderColor=default;sketch=0;html=1;" parent="32" vertex="1">
+                    <mxGeometry y="26" width="160" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" style="edgeStyle=none;html=1;" parent="1" source="36" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="505" y="450"/>
+                            <mxPoint x="390" y="450"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="Medico" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;labelBorderColor=none;sketch=0;strokeColor=default;fillColor=none;gradientColor=none;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="410" y="480" width="190" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="- especialidade: String&lt;br&gt;- CRM: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;labelBorderColor=none;sketch=0;html=1;" parent="36" vertex="1">
+                    <mxGeometry y="26" width="190" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;labelBorderColor=none;sketch=0;html=1;" parent="36" vertex="1">
+                    <mxGeometry y="60" width="190" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="+ getCRM(String): String&lt;br&gt;+ setCRM(String): void&lt;br&gt;+ getEspecialidade(String): String&lt;br&gt;+ setEspecialidade(String): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;labelBorderColor=none;sketch=0;html=1;" parent="36" vertex="1">
+                    <mxGeometry y="68" width="190" height="72" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" style="edgeStyle=none;html=1;" parent="1" source="53" target="39" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="390" y="640"/>
+                            <mxPoint x="494" y="640"/>
+                            <mxPoint x="510" y="640"/>
+                        </Array>
+                        <mxPoint x="390" y="670" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="48" style="edgeStyle=none;html=1;" parent="1" source="53" target="32" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="269.9999999999999" y="548.0000000000002" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="390" y="640"/>
+                            <mxPoint x="270" y="640"/>
+                        </Array>
+                        <mxPoint x="390" y="670" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="53" value="Prontuario" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;labelBorderColor=none;sketch=0;strokeColor=default;fillColor=none;gradientColor=none;html=1;swimlaneLine=1;" vertex="1" parent="1">
+                    <mxGeometry x="287.5" y="670" width="205" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="- exames: String&lt;br&gt;- consultas: String&lt;br&gt;- medicamentos: String&lt;br&gt;-medResponsavel: String&lt;br&gt;-Data: Date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;labelBorderColor=none;sketch=0;html=1;" vertex="1" parent="53">
+                    <mxGeometry y="26" width="205" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;labelBorderColor=default;sketch=0;html=1;" vertex="1" parent="53">
+                    <mxGeometry y="110" width="205" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="+ getExames(String): String&lt;br&gt;+ setExames(String): void&lt;br&gt;+ getConsultas(String): String&lt;br&gt;+ setConsultas(String): void&lt;br&gt;+ getMedResponsavel(String): String&lt;br&gt;+ setMedResponsavel(String): void&lt;br&gt;+ getMedicamentos(String): String&lt;br&gt;+ setMedicamentos(String): void&lt;br&gt;+ getData(Date): Date&lt;br&gt;+ setData(Date): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;shadow=0;glass=0;labelBackgroundColor=none;labelBorderColor=none;sketch=0;html=1;" vertex="1" parent="53">
+                    <mxGeometry y="118" width="205" height="152" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
