@@ -37,11 +37,27 @@ public class main {
 				Integer numeroHoras = gerador.nextInt(101);
 				Double valorHora = gerador.nextDouble();
 				empr[i] = new EmpregadoHorista(valorHora, numeroHoras);
+				break;
 			}
 			case 5: {
-				int numeroTarefas = 1000 + gerador.nextInt(501);
-				double valorTarefa = gerador.nextDouble() * 60 + 20;
+				Integer numeroTarefas = 1000 + gerador.nextInt(501);
+				Double valorTarefa = gerador.nextDouble() * 60 + 20;
 				empr[i] = new EmpregadoTarefeiro(valorTarefa, numeroTarefas);
+				break;
+			}
+			case 6: {
+				Integer horaDirecao = gerador.nextInt();
+				Double valorHora = gerador.nextDouble() *  + 1000;
+				empr[i] = new Motorista(valorHora, horaDirecao);
+				break;
+			}
+			case 7: {
+				Double salario = gerador.nextDouble(5000, 15000);
+				Double bonus = gerador.nextDouble(1000, 5000);
+				Boolean prob = gerador.nextBoolean();
+				Double loteria = gerador.nextDouble(20000, 40000);
+				empr[i] = new Gerente(salario, bonus, prob, loteria);
+				break;
 			}
 			}
 		}
